@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {% for chat in chats %}
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">{{ chat.author }}</a>
+                    <small class="text-muted">{{ chat.date_posted }}</small>
+                </div>
+                <h2><a class="article-title" href="#">{{ chat.title }}</a></h2>
+                <p class="article-content">{{ chat.content }}</p>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock %}
